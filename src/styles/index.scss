@@ -11,10 +11,14 @@ body {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
-a{
-	text-decoration: none;
+
+a {
+    text-decoration: none;
 }
+
 body {
     background: #eee;
     font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
@@ -23,10 +27,12 @@ body {
     margin: 0;
     padding: 0;
 }
-.ul1 img{
-	width: 50px;
-	height: 50px;
+
+.ul1 img {
+    width: 50px;
+    height: 50px;
 }
+
 .swiper-container {
     width: 100%;
     height: 100%;
@@ -50,11 +56,14 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    position: relative;
 }
-.div1 img{
-	width: 200px;
-	height: 100px;
+
+.div1 img {
+    width: 200px;
+    height: 100px;
 }
+
 .nav {
     background: url(../img/11.jpg) no-repeat;
 }
@@ -66,8 +75,9 @@ body {
 .nav3 {
     background: url(../img/a.jpg) no-repeat;
 }
-.ppc{
-	background: url(../img/18.jpg) no-repeat;
+
+.ppc {
+    background: url(../img/18.jpg) no-repeat;
 }
 
 .pic {
@@ -81,8 +91,8 @@ body {
 .name {
     font-size: 20px;
     position: absolute;
-    right: 11px;
-    top: 26px;
+    right: 9px;
+    top: 43px;
 }
 
 .jianli {
@@ -101,8 +111,9 @@ body {
     height: 50px;
     font-size: 16px;
     background: #ccc;
-    line-height: 30px;
+    line-height: 35px;
     text-align: center;
+    margin: 10px;
 }
 
 .hei {
@@ -113,18 +124,22 @@ body {
     width: 200px;
     height: 100px;
 }
-.deai{
-	font-size: 40px;
+
+.deai {
+    font-size: 40px;
 }
+
 .ma {
     height: 150px;
     width: 150px;
     background: #ccc;
 }
-.ma img{
-	width: 150px;
-	height: 150px;
+
+.ma img {
+    width: 150px;
+    height: 150px;
 }
+
 #header {
     position: absolute;
     z-index: 2;
@@ -141,6 +156,35 @@ body {
     font-weight: bold;
 }
 
+.change {
+    animation: change 2s linear infinite;
+}
+
+@keyframes change {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+    50% {
+        -webkit-transform: rotate(180deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+.head-bc img {
+    width: 30px;
+    height: 30px;
+}
+
+.head-bc {
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    right: 20px;
+    top: 60px;
+}
+
 #footer {
     position: absolute;
     z-index: 2;
@@ -154,13 +198,27 @@ body {
     display: flex;
     flex-direction: row;
 }
-.scr1,.arc1,.arc,.scr,.p2,.p3{
-	line-height: 20px;
-}
-.arc,.scr,.scr1{
-	margin:0 15px; 
+
+.scr1,
+.arc1,
+.arc,
+.scr,
+.p2,
+.p3 {
+    line-height: 20px;
 }
 
+.arc,
+.scr,
+.scr1 {
+    margin: 0 20px;
+}
+.arc,.arc1{
+	margin-top: 10px;
+}
+.scr,.scr1{
+	margin-bottom: 20px;
+}
 #wrapper {
     position: absolute;
     z-index: 1;
@@ -207,12 +265,13 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    color: #FFFFFF;
 }
 
 .ul1 li {
     display: flex;
     flex-direction: row;
-    margin: 5px;
+    margin:0 20px;
     background: url(../img/line.svg) repeat-x bottom;
 }
 
@@ -223,55 +282,88 @@ body {
     align-items: flex-end;
 }
 
+
 .ul1 li div:nth-child(2) {
-    margin-left: 20px;
+    margin-left: 35px;
 }
 
 .ul1 li div:first-child {
     width: 40px;
     height: 40px;
     margin-top: 15px;
-    
 }
-
+.content p:first-child{
+margin-top: 10px;
+}
 .content p:last-child {
-    margin: 10px 0 10px 0;
+    margin-bottom: 10px;
     font-size: 14px;
 }
 
 .content p:nth-child(2) {
     margin: 10px 0;
 }
-.ul2,.ul3{
-	 height: 100%;
-      width: 100%;
-      display: flex;
-     flex-direction: column;
-       
-
-}
-.ul2 li{
+.content{
 	display: flex;
 	flex-direction: column;
-	flex: 1;
-	background: url(../img/line.svg) repeat-x bottom;
 }
-.div{
+.content p{
 	display: flex;
-	justify-content: center;
+	align-items: center;
+	flex: 1;
+	height: 20px;
 }
-.hh{
-	width: 300px;
-	height: 150px;
-	background: #abc;
+
+.ul2,
+.ul3 {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
 }
-.nei{
-	display: none;
+
+.ul2 li {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    background: url(../img/line.svg) repeat-x bottom;
 }
-.ul3 li{
-	background: url(../img/line.svg) repeat-x bottom;
+
+.div {
+    display: flex;
+    justify-content: center;
 }
-.ul3 img,.ul2 img{
-	width: 300px;
-	height: 150px;
+
+.hh {
+    width: 300px;
+    height: 150px;
+    background: #abc;
+}
+
+.nei {
+    display: none;
+}
+
+.ul3 li {
+    background: url(../img/line.svg) repeat-x bottom;
+}
+
+.ul3 img,
+.ul2 img {
+    width: 300px;
+    height: 150px;
+}
+.text1,.text{
+	margin: 20px 0;
+	font-size: 16px;
+}
+.fei {
+	height: 87px;
+	width: 87px;
+	background: url(../img/f.png) no-repeat;
+	border-radius: 44px;
+	display: flex;
+	position: absolute;
+	right: 10px;
+	top: 30px;
 }

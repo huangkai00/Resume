@@ -56,7 +56,7 @@ var myScroll;
 $.post('http://localhost:8000/skill', function(data) {
 
     for (var i = 0; i < data.length; i++) {
-        $('.p1 a').eq(i).html('category:' + data[i].category)
+        $('.p1').eq(i).html('category:' + data[i].category)
         $('.p2').eq(i).html('name:' + data[i].name)
         $('.p3').eq(i).html('time:' + data[i].time)
     }
@@ -66,17 +66,7 @@ $.post('http://localhost:8000/skill', function(data) {
     document.addEventListener('touchmove', function(e) { e.preventDefault(); }, false);
 });
 
-/*$('#footer .button').tap(function(){
-	var html='';
-	var targetApi=$(this).attr('id');
-	$.post('http://localhost:8000/' + targetApi,function(data) {
-		for(var i=0;i<data.length;i++){
-		html+='<li>'+data[i].category+','+data[i].name+'</li>'
-	}
-	$('#scroller ul').html(html);
-	});
-})
-*/
+
 
 $.post('http://localhost:8000/project', function(data) {
 
@@ -107,6 +97,18 @@ $.post('http://localhost:8000/work', function(data) {
 $('#footer .button').tap(function() {
     var index = $(this).index()
     $('.nei').eq(index).css({ 'display': 'block' }).siblings('.nei').css({ 'display': 'none' })
+    myScroll.scrollTo(0,0);
+    myScroll.refresh();
 
 });
-
+	var media=document.getElementById('media')
+$('.music').tap(function(){
+	
+	if(media.paused){
+		media.play();
+		$('.music').addClass('change')
+	}else{
+		media.pause();
+		$('.music').removeClass('change')
+	}
+})
